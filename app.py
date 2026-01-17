@@ -42,6 +42,7 @@ def analyze_emotion(text):
         "top_emotions": top_emotions,
         "raw_scores": raw_scores
     }
+    
 
 # -----------------------------
 # STEP 3: Main Pipeline
@@ -57,3 +58,14 @@ if __name__ == "__main__":
     print("Subjectivity:", results["subjectivity"])
     print("Top Emotions:", results["top_emotions"])
     print("All Emotion Scores:", results["raw_scores"])
+
+
+from transformers import pipeline
+
+# Load the emotion classifier
+classifier = pipeline("text-classification", model="j-hartmann/emotion-english-distilroberta-base")
+
+def get_emotion(user_text):
+    result = classifier(user_text)
+    # Returns something like: [{'label': 'joy', 'score': 0.98}]
+    return result[0]['label']
