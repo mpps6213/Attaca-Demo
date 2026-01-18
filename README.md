@@ -121,8 +121,8 @@ ATTACCA_FINAL/
 ```bash
 python -m venv venv .\venv\Scripts\Activate
 Windows : .\venv\Scripts\Activate
-2. Install dependencies : pip install -r requirements.txt
-3. Run the application : python -m streamlit run app.py
+## 2. Install dependencies : pip install -r requirements.txt
+## 3. Run the application : python -m streamlit run app.py
 The website will automatically open in your default web browser.
 ## Why Riley’s Rhythms? 
 Riley’s Rhythms explores how emotion-aware AI can:
